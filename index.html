@@ -2,62 +2,56 @@
 <html>
 <head>
   <style>
-    body {
-      margin: 0;
-      padding: 10px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* 關鍵：強制宣告背景透明且支援深淺色 */
+    /* 強制整個網頁環境支援深色模式並透明 */
+    html, body {
       background-color: transparent !important;
       color-scheme: light dark;
+      margin: 0;
+      padding: 0;
       overflow: hidden;
     }
-    .btn-container {
+    .container {
       display: flex;
       gap: 16px;
-      background: transparent !important;
+      padding: 10px;
     }
-    .btn {
-      display: inline-block;
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="https://yasac.substack.com/subscribe" target="_blank" style="
+      display:inline-block;
+      background: #ff6b35;
+      color: #fff;
       font-size: 1rem;
       font-weight: 400;
       padding: 10px 24px;
       border-radius: 14px;
       text-decoration: none;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
       font-family: 'Noto Sans TC', 'Poppins', Arial, sans-serif;
-      letter-spacing: 1px;
-      transition: all 0.2s ease;
-      text-align: center;
-      border: none;
-      cursor: pointer;
-    }
-    .btn-orange {
-      background: #ff6b35;
-      color: #fff;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-    }
-    .btn-orange:hover {
-      background: #fa8137;
-      box-shadow: 0 6px 18px rgba(255,107,53,0.3);
-      transform: translateY(-2px);
-    }
-    .btn-white {
+      transition: 0.2s;
+    "
+    onmouseover="this.style.background='#fa8137'; this.style.transform='translateY(-2px)';"
+    onmouseout="this.style.background='#ff6b35'; this.style.transform='translateY(0)';"
+    >訂閱電子報</a>
+
+    <a href="mailto:tonyonier99@gmail.com" target="_blank" style="
+      display:inline-block;
       background: #fff;
       color: #222831;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.10);
-    }
-    .btn-white:hover {
-      background: #e2e3e6;
-      box-shadow: 0 6px 18px rgba(255,255,255,0.15);
-      transform: translateY(-2px);
-    }
-  </style>
-</head>
-<body>
-  <div class="btn-container">
-    <a href="https://yasac.substack.com/subscribe" target="_blank" class="btn btn-orange">訂閱電子報</a>
-    <a href="mailto:tonyonier99@gmail.com" target="_blank" class="btn btn-white">聯絡我</a>
+      font-size: 1rem;
+      font-weight: 400;
+      padding: 10px 24px;
+      border-radius: 14px;
+      text-decoration: none;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      font-family: 'Noto Sans TC', 'Poppins', Arial, sans-serif;
+      transition: 0.2s;
+    "
+    onmouseover="this.style.background='#e2e3e6'; this.style.transform='translateY(-2px)';"
+    onmouseout="this.style.background='#fff'; this.style.transform='translateY(0)';"
+    >聯絡我</a>
   </div>
 </body>
 </html>
